@@ -8,5 +8,4 @@ Jinja2
 itsdangerous
 MarkupSafe
 pandas
-os
 cv2
