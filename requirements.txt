@@ -10,5 +10,7 @@ MarkupSafe
 pandas
 opencv-python
 imageio
+scikit-image
+scikit-learn
 
 
