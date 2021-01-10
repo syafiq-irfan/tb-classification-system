@@ -13,7 +13,6 @@ imageio
 scikit-image
 scikit-learn
 more-itertools
-shutil
 matplotlib
 
 
