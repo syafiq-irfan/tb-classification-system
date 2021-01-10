@@ -8,5 +8,6 @@ Jinja2
 itsdangerous
 MarkupSafe
 pandas
-opencv
 os
+opencv-python
+
