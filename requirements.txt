@@ -12,5 +12,8 @@ opencv-python
 imageio
 scikit-image
 scikit-learn
+itertools
+shutil
+matplotlib
 
 
