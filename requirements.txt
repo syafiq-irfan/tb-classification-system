@@ -9,4 +9,6 @@ itsdangerous
 MarkupSafe
 pandas
 opencv-python
+imageio
+
 
