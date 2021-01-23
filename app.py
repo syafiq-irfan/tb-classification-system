@@ -94,7 +94,8 @@ print('Model loaded. Check http://127.0.0.1:5000/ or http://localhost:5000/')
 
 model.compile(Adam(lr=0.0001), loss='binary_crossentropy', 
               metrics=['accuracy'])
-model.load_weights('H:/TB Web App (try gabung)/static/TB_vgg19model_100epoch_VGG19_feature_extract.h5')
+model.load_weights('static/TB_vgg19model_100epoch_VGG19_feature_extract.h5')
+
 
 
 COUNT = 0
@@ -161,4 +162,5 @@ def load_img():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    #app.run(debug=True, host="localhost", port=5000)
 
