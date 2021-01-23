@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>TB Detection</title>
         <meta charset="UTF-8">
         <link href="static/style.css" rel="stylesheet">
     </head>
     <body>    
         <center>
-            <div class='cont'>
-                <h2>WELCOME<br> TO TB PREDICTION</h2>
+            <div>
+                <h1>A.I based Chest X-Ray analysis</h1>
+                <h2>for Tuberculosis Classification</h2><br>
+                <h3>Implemented by Tensorflow and Keras</h3><br><br>
             </div>
             
+            <p class="description"><br>
+            Choose Chest X-Ray image file and click Classify to get the diagnosis classification.
+            </p><br>
 
         <form method="POST" action="{{url_for('home')}}" enctype="multipart/form-data">
-            <input type="file" name='image' class='btn'><br><br><br>
-            <input type="submit" class='btn'>
+            <!--<button id="file" name='image' class='btn' onclick="document.getElementById('file').click(); return false;">Upload Button</button>-->
+            <!--<span class="btn">Add file </span>-->
+            <!--<input type="file" name='image' class='btn' id="input-file"/><br><br><br>-->
+            <input type="file" name='image' class='btn' id="file" accept="image/*" onchange="previewImage();"><br><br><br>
+            <img id="preview">
+            <label for="submit"></label><br>
+            <input type="submit" value="Classify" class='btn'><br>
+            
         </form>
-
-    </center>
+        <footer>
+            <div class="foot">
+        
+            <br><p><b>Beta Version-2021</b></p><br>
+            <p><b>Developed By <a href="https://www.linkedin.com/in/syafiq-irfan" target="_blank">Mohamad Syafiq Irfan Bin Saaidi</a></b></p>
+        
+            </div>
+        
+        </footer>
+        
+        </center>
 
     </body>
+    <script>
+        function previewImage() {
+            var file = document.getElementById("file").files;
+            if (file.length > 0) {
+                var fileReader = new FileReader();
+     
+                fileReader.onload = function (event) {
+                    document.getElementById("preview").setAttribute("src", event.target.result);
+                };
+     
+                fileReader.readAsDataURL(file[0]);
+            }
+        }
+    </script>
 </html>
