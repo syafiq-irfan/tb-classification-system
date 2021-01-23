@@ -6,21 +6,32 @@
         <link href="static/style.css" rel="stylesheet">
     </head>
     <body>
+        
         <center>
-            <div class='cont'>
+        <div>
                 
             {% if data[1] > 0.50 %}
-            <h1>I think its a TB</h1>
+            <h1>Result Diagnosis : Tuberculosis</h1>
             
             {%else%}
-            <h1> looks like Normal </h1>
+            <h1>Result Diagnosis : Normal </h1>
             
             {%endif%}
         </div>
 
-            <h1>Accuracy<br> Normal: <span>{{data[0]}}</span> <br>TB: <span>{{data[1]}}</span><br> </h1>
-            <img src="{{url_for('load_img')}}" alt='img'>
-            <a href="/" class='btn'>go back</a>
+            <h1>Prediction Probability<br> Normal: <span>{{data[0]}}</span> <br>TB: <span>{{data[1]}}</span><br> </h1>
+            <img src="{{url_for('load_img')}}" alt='img'><br>
+            <a href="/" class='btn'>back</a><br><br>
+        
+        <footer>
+            <div class="foot">
+            
+            <p><b>Beta Version-2021</b></p><br>
+            <p><b>Developed By <a href="https://www.linkedin.com/in/syafiq-irfan" target="_blank">Mohamad Syafiq Irfan Bin Saaidi</a></b></p>
+            
+            </div>
+            
+        </footer>
 
         </center>  
         
