@@ -52,12 +52,12 @@ datagen = ImageDataGenerator(rescale=1.0/255)
 #                                        class_mode='categorical')
 
 # Note: shuffle=False causes the test dataset to not be shuffled
-valid_path = 'C:/Users/User/DEEP LEARNING/deep learning/base_directories/val_dir'
-test_gen = datagen.flow_from_directory(valid_path,
-                                        target_size=(224,224),
-                                        batch_size=10,
-                                        class_mode='categorical',
-                                        shuffle=False)
+#valid_path = 'C:/Users/User/DEEP LEARNING/deep learning/base_directories/val_dir'
+#test_gen = datagen.flow_from_directory(valid_path,
+#                                        target_size=(224,224),
+#                                        batch_size=10,
+#                                        class_mode='categorical',
+#                                        shuffle=False)
 
 from tensorflow.keras.applications.vgg19 import VGG19
 from tensorflow.keras.applications.resnet50 import preprocess_input
@@ -70,10 +70,10 @@ for layer in conv_base.layers:
     layer.trainable = False
 
 
-from glob import glob
+#from glob import glob
 # useful for getting number of output classes
-folders = glob('C:/Users/User/DEEP LEARNING/TB_directoriesVGG19_feature_extract(try)/train_dir/*')
-folders
+#folders = glob('C:/Users/User/DEEP LEARNING/TB_directoriesVGG19_feature_extract(try)/train_dir/*')
+#folders
 
 dropout_dense = 0.3
 
@@ -130,7 +130,7 @@ def home():
     TB_img=TB_img/255
     prediction = model.predict(TB_img)
     
-    test_gen.class_indices
+    #test_gen.class_indices
     print(f"Probability the image is Normal is :{prediction}")
     #img_arr = cv2.imread('static/{}.jpg'.format(COUNT))
     #img_arr = cv2.resize(img_arr, (224,224))
